@@ -9,6 +9,7 @@
 #include "../GenVisUploadLib/ImageStructQueue.h"
 static ImageStructQueue s_imageStructQueue;
 static int uploadThreadNum = 8;
+static unsigned short maxSelectionRecord = 50;
 static std::vector<std::thread> threadVec;
 int main(int argc, char* argv[])
 {
@@ -26,7 +27,7 @@ int main(int argc, char* argv[])
 		DBWrapperPtr dbWrapperPtr(new SqliteDBWrapper(argv[1]));
 		DelegateUploaderPtr delegateUploaderPtr(new StubDelegateUploader());
 		delegateUploaderPtr->Connect(argv[2]);
-		SqliteImageFetcher imageFetcher(dbWrapperPtr);
+		SqliteImageFetcher imageFetcher(dbWrapperPtr, maxSelectionRecord);
 		SyncImageUploader imageUploader(dbWrapperPtr, delegateUploaderPtr);
 		//start different upload thread to pull item from the queue and upload
 		for (int i = 0; i < uploadThreadNum; i++)

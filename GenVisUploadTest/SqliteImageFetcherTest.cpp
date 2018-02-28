@@ -15,9 +15,9 @@ TEST(SqliteImageFetcherTest, WaitToFetchOnce_EmptiedQueue)
 {
 	ImageStructQueuePtr imageStructQueuePtr(new ImageStructQueue());
 	DBWrapperPtr dbWrapperPtr(new Mock_SqliteDBWrapper());
-	SqliteImageFetcher sqliteImageFetcher(dbWrapperPtr);
+	SqliteImageFetcher sqliteImageFetcher(dbWrapperPtr, 20);
 
-	EXPECT_CALL((Mock_SqliteDBWrapper&)*dbWrapperPtr, SelectItems(_)).Times(1);
+	EXPECT_CALL((Mock_SqliteDBWrapper&)*dbWrapperPtr, SelectItems(_, _, _)).Times(1);
 	sqliteImageFetcher.WaitToFetchOnce(imageStructQueuePtr);
 	
 }

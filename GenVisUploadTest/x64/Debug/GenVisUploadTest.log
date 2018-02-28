@@ -1,4 +1,4 @@
-﻿Build started 26/02/2018 4:12:28 PM.
+﻿Build started 28/02/2018 3:40:03 PM.
      1>Project "D:\Github\GenVisUpload\GenVisUploadTest\GenVisUploadTest.vcxproj" on node 2 (Clean target(s)).
      1>_PrepareForClean:
          Deleting file "x64\Debug\GenVisUploadTest.tlog\GenVisUploadTest.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:00.27

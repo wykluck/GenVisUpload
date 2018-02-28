@@ -29,10 +29,10 @@ TEST(ImageStructQueueTest, try_dequeue_NonEmptyQueue)
 	ImageStructQueue imageStructQueue;
 	std::vector<unsigned char> buffer;
 	ImageStructPtr imageStructPtr(new ImageStruct(1, buffer));
-	imageStructQueue.enqueue(imageStructPtr, true);
-	ASSERT_EQ(false, imageStructQueue.NeedMoreItems());
+	imageStructQueue.enqueue(imageStructPtr);
 	ASSERT_EQ(true, imageStructQueue.try_dequeue(imageStructPtr));
-	ASSERT_EQ(false, imageStructQueue.NeedMoreItems());
+	imageStructQueue.WaitForFetchMore();
+	ASSERT_EQ(true, imageStructQueue.NeedMoreItems());
 	ASSERT_EQ(1, imageStructPtr->imageID);
 }
 
@@ -40,19 +40,18 @@ TEST(ImageStructQueueTest, try_dequeue_NonEmptyQueue)
 TEST(ImageStructQueueTest, WaitForEmptyQueue_EmptyQueue)
 {
 	ImageStructQueue imageStructQueue;
-	imageStructQueue.WaitForAllItemProcessed();
+	imageStructQueue.WaitForFetchMore();
 }
 
 TEST(ImageStructQueueTest, WaitForEmptyQueue_EmptiedQueue)
 {
 	ImageStructQueue imageStructQueue;
 	ImageStructPtr imageStructPtr;
-	imageStructQueue.enqueue(imageStructPtr, true);
+	imageStructQueue.enqueue(imageStructPtr);
 	std::thread producerThread([&]() {
-		imageStructQueue.WaitForAllItemProcessed();
+		imageStructQueue.WaitForFetchMore();
 	});
 	ASSERT_EQ(true, imageStructQueue.try_dequeue(imageStructPtr));
-	imageStructQueue.NotifyProducerIfNecessary(true);
 	ASSERT_EQ(false, imageStructQueue.try_dequeue(imageStructPtr));
 	producerThread.join();
 }

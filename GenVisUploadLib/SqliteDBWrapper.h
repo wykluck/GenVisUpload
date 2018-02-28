@@ -6,6 +6,7 @@
 #include <memory>
 #include <functional>
 #include <vector>
+#include <boost/optional.hpp>
 class EXPORTED SqliteDBWrapper : public IDBWrapper
 {
 public:
@@ -13,7 +14,8 @@ public:
 	virtual ~SqliteDBWrapper();
 
 	virtual void DeleteItem(const int imageId);
-	virtual void SelectItems(std::function<void(int, std::vector<unsigned char>& data)> callback);
+	virtual void SelectItems(boost::optional<int> lastSelectionId, unsigned short maxSelectionRecord,
+		std::function<void(int, std::vector<unsigned char>& data)> callback);
 
 private:
 	sqlite3* m_db;

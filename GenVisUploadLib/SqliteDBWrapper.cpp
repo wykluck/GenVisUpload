@@ -40,11 +40,17 @@ void SqliteDBWrapper::DeleteItem(const int imageId)
 	}
 }
 
-void SqliteDBWrapper::SelectItems(std::function<void(int, std::vector<unsigned char>& data)> callback)
+void SqliteDBWrapper::SelectItems(boost::optional<int> lastSelectionId, unsigned short maxSelectionRecord,
+	std::function<void(int, std::vector<unsigned char>& data)> callback)
 {
 	sqlite3_stmt *statement;
-	const char* sql = "SELECT ID, ImageContent FROM Image";
-	if (sqlite3_prepare_v2(m_db, sql, strlen(sql), &statement, 0) != SQLITE_OK)
+	std::ostringstream sqlStrStream;
+	sqlStrStream  << "SELECT ID, ImageContent FROM Image ORDER BY ID LIMIT " << maxSelectionRecord;
+	if (lastSelectionId.is_initialized())
+	{
+		sqlStrStream << " WHERE ID > " << lastSelectionId.get();
+	}
+	if (sqlite3_prepare_v2(m_db, sqlStrStream.str().c_str(), strlen(sqlStrStream.str().c_str()), &statement, 0) != SQLITE_OK)
 	{
 		sqlite3_finalize(statement);
 		throw std::runtime_error("Sql running error in preparing to select.");

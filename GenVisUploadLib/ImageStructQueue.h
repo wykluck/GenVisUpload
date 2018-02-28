@@ -8,44 +8,40 @@
 class EXPORTED ImageStructQueue
 {
 public:
-	ImageStructQueue() :m_itemCountForProcessing(0)
+	ImageStructQueue() :m_isQueueEmpty(true)
 	{
 
 	}
-	virtual void enqueue(ImageStructPtr imageStructPtr, bool fromProducer) {
+	virtual void enqueue(ImageStructPtr imageStructPtr) {
 		m_internalQueue.enqueue(imageStructPtr);
-		if (fromProducer)
-		{
-			std::unique_lock<std::mutex> lck(cv_m);
-			m_itemCountForProcessing++;
-		}
 	}
 	virtual bool try_dequeue(ImageStructPtr& imageStructPtr) {
-		return m_internalQueue.try_dequeue(imageStructPtr);
-	}
-	virtual void NotifyProducerIfNecessary(bool bProcessedOneItem)
-	{
-		std::unique_lock<std::mutex> lck(cv_m);
-		if (bProcessedOneItem)
-			m_itemCountForProcessing--;
-		if (m_itemCountForProcessing == 0)
+		bool dequeueRes = m_internalQueue.try_dequeue(imageStructPtr);
+		if (!dequeueRes)
+		{
+			std::unique_lock<std::mutex> lck(cv_m);
+			m_isQueueEmpty = true;
 			cv.notify_all();
+		}	
+		return dequeueRes;
 	}
-	virtual void WaitForAllItemProcessed()
+	virtual void WaitForFetchMore()
 	{
+		if (m_internalQueue.size_approx() > 0)
+			m_isQueueEmpty = false;
 		std::unique_lock<std::mutex> lck(cv_m);
-		cv.wait(lck, [&]() {return m_itemCountForProcessing == 0; });
+		cv.wait(lck, [&]() {return m_isQueueEmpty; });
 	}
 	bool NeedMoreItems()
 	{
-		return m_itemCountForProcessing == 0;
+		return m_isQueueEmpty;
 	}
 private:
 
 	moodycamel::ConcurrentQueue<ImageStructPtr> m_internalQueue;
 	std::condition_variable cv;
 	std::mutex cv_m;
-	int m_itemCountForProcessing;
+	bool m_isQueueEmpty;
 };
 
 typedef std::shared_ptr<ImageStructQueue> ImageStructQueuePtr;
