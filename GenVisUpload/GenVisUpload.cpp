@@ -8,9 +8,10 @@
 #include <stdexcept>
 #include "../GenVisUploadLib/ImageStructQueue.h"
 static ImageStructQueue s_imageStructQueue;
-static int uploadThreadNum = 8;
-static unsigned short maxSelectionRecord = 50;
+static int uploadThreadNum = 16;
+static unsigned short maxSelectionRecord = 20;
 static std::vector<std::thread> threadVec;
+/* argv[1] is sqlite db path, argv[2] is "aws", argv[3] is optional a log file path*/
 int main(int argc, char* argv[])
 {
 	if (argc != 3)
@@ -19,7 +20,6 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	
 
 	std::shared_ptr<ImageStructQueue> imageStructQueuePtr(&s_imageStructQueue);
 	try

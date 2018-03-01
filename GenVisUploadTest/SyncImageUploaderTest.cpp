@@ -46,6 +46,7 @@ public:
 TEST_F(StubImageUploaderTestFixture, TryUploadOneItem_NonEmptyQueue)
 {
 	EXPECT_CALL((NiceMock<Mock_ImageStructQueue>&)*m_imageStructQueuePtr, try_dequeue(_)).Times(1).WillOnce(DoAll(SetArgReferee<0>(m_imageStructPtr), Return(true)));
+	ON_CALL((NiceMock<Mock_ImageStructQueue>&)*m_imageStructQueuePtr, enqueue(_)).WillByDefault(Return());
 
 	SyncImageUploader imageUploader(m_dbWrapperPtr, m_delegateUploaderPtr);
 

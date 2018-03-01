@@ -45,11 +45,12 @@ void SqliteDBWrapper::SelectItems(boost::optional<int> lastSelectionId, unsigned
 {
 	sqlite3_stmt *statement;
 	std::ostringstream sqlStrStream;
-	sqlStrStream  << "SELECT ID, ImageContent FROM Image ORDER BY ID LIMIT " << maxSelectionRecord;
+	sqlStrStream << "SELECT ID, ImageContent FROM Image";
 	if (lastSelectionId.is_initialized())
 	{
 		sqlStrStream << " WHERE ID > " << lastSelectionId.get();
 	}
+	sqlStrStream << " ORDER BY ID LIMIT " << maxSelectionRecord;
 	if (sqlite3_prepare_v2(m_db, sqlStrStream.str().c_str(), strlen(sqlStrStream.str().c_str()), &statement, 0) != SQLITE_OK)
 	{
 		sqlite3_finalize(statement);

@@ -3,6 +3,7 @@
 #include "IImageUploader.h"
 #include "IDBWrapper.h"
 #include "IDelegateUploader.h"
+#include "stdio.h"
 class EXPORTED SyncImageUploader : public IImageUploader
 {
 public:

@@ -45,7 +45,7 @@ void SyncImageUploader::UploadFrom(ImageStructQueuePtr imageStructQueuePtr)
 		if (!TryUploadOneItem(imageStructQueuePtr))
 		{
 			//queue is empty, notify the fetcher to fetch more and sleep a bit
-			std::this_thread::sleep_for(std::chrono::microseconds(100));
+			std::this_thread::sleep_for(std::chrono::microseconds(300));
 		}
 	}
 }

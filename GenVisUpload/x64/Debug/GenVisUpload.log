@@ -1,9 +1,41 @@
-﻿Build started 28/02/2018 3:40:04 PM.
-     1>Project "D:\Github\GenVisUpload\GenVisUpload\GenVisUpload.vcxproj" on node 2 (Clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "x64\Debug\GenVisUpload.tlog\GenVisUpload.lastbuildstate".
-     1>Done Building Project "D:\Github\GenVisUpload\GenVisUpload\GenVisUpload.vcxproj" (Clean target(s)).
+﻿Build started 1/03/2018 11:51:16 AM.
+     1>Project "D:\Github\GenVisUpload\GenVisUpload\GenVisUpload.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "x64\Debug\GenVisUpload.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       VcpkgTripletSelection:
+         Using triplet "x64-windows" from "c:\vcpkg\installed\x64-windows\"
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /I"c:\vcpkg\installed\x64-windows\include" /ZI /nologo /W3 /WX- /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt GenVisUpload.cpp
+         GenVisUpload.cpp
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(41): warning C4251: 'ImageStructQueue::m_internalQueue': class 'moodycamel::ConcurrentQueue<ImageStructPtr,moodycamel::ConcurrentQueueDefaultTraits>' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(41): note: see declaration of 'moodycamel::ConcurrentQueue<ImageStructPtr,moodycamel::ConcurrentQueueDefaultTraits>'
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(42): warning C4251: 'ImageStructQueue::cv': class 'std::condition_variable' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\mutex(536): note: see declaration of 'std::condition_variable'
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(43): warning C4251: 'ImageStructQueue::cv_m': class 'std::mutex' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\mutex(78): note: see declaration of 'std::mutex'
+     1>d:\github\genvisupload\genvisuploadlib\sqliteimagefetcher.h(17): warning C4251: 'SqliteImageFetcher::m_dbWrapperPtr': class 'std::shared_ptr<IDBWrapper>' needs to have dll-interface to be used by clients of class 'SqliteImageFetcher'
+         d:\github\genvisupload\genvisuploadlib\idbwrapper.h(14): note: see declaration of 'std::shared_ptr<IDBWrapper>'
+     1>d:\github\genvisupload\genvisuploadlib\sqliteimagefetcher.h(18): warning C4251: 'SqliteImageFetcher::m_queuePtr': class 'std::shared_ptr<ImageStructQueue>' needs to have dll-interface to be used by clients of class 'SqliteImageFetcher'
+         d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(47): note: see declaration of 'std::shared_ptr<ImageStructQueue>'
+     1>d:\github\genvisupload\genvisuploadlib\sqliteimagefetcher.h(19): warning C4251: 'SqliteImageFetcher::m_lastSelectionId': class 'boost::optional<int>' needs to have dll-interface to be used by clients of class 'SqliteImageFetcher'
+         d:\github\genvisupload\genvisuploadlib\idbwrapper.h(11): note: see declaration of 'boost::optional<int>'
+     1>d:\github\genvisupload\genvisuploadlib\syncimageuploader.h(17): warning C4251: 'SyncImageUploader::m_dbWrapperPtr': class 'std::shared_ptr<IDBWrapper>' needs to have dll-interface to be used by clients of class 'SyncImageUploader'
+         d:\github\genvisupload\genvisuploadlib\idbwrapper.h(14): note: see declaration of 'std::shared_ptr<IDBWrapper>'
+     1>d:\github\genvisupload\genvisuploadlib\syncimageuploader.h(18): warning C4251: 'SyncImageUploader::m_delegateUploaderPtr': class 'std::shared_ptr<IDelegateUploader>' needs to have dll-interface to be used by clients of class 'SyncImageUploader'
+         d:\github\genvisupload\genvisuploadlib\idelegateuploader.h(12): note: see declaration of 'std::shared_ptr<IDelegateUploader>'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\GenVisUpload\x64\Debug\GenVisUpload.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win64" /LIBPATH:"c:\vcpkg\installed\x64-windows\debug\lib" /LIBPATH:"c:\vcpkg\installed\x64-windows\debug\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "c:\vcpkg\installed\x64-windows\debug\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Github\GenVisUpload\x64\Debug\GenVisUpload.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\GenVisUpload\x64\Debug\GenVisUpload.lib" /MACHINE:X64 x64\Debug\GenVisUpload.obj
+         D:\Github\GenVisUpload\x64\Debug\GenVisUploadLib.lib
+         GenVisUpload.vcxproj -> D:\Github\GenVisUpload\x64\Debug\GenVisUpload.exe
+         GenVisUpload.vcxproj -> D:\Github\GenVisUpload\x64\Debug\GenVisUpload.pdb (Full PDB)
+       AppLocalFromInstalled:
+         powershell.exe -ExecutionPolicy Bypass -noprofile -File "c:\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "D:\Github\GenVisUpload\x64\Debug\GenVisUpload.exe" "c:\vcpkg\installed\x64-windows\debug\bin" "x64\Debug\GenVisUpload.tlog\GenVisUpload.write.1u.tlog" "x64\Debug\vcpkg.applocal.log"
+         D:\Github\GenVisUpload\x64\Debug\sqlite3.dll
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\GenVisUpload.tlog\unsuccessfulbuild".
+         Touching "x64\Debug\GenVisUpload.tlog\GenVisUpload.lastbuildstate".
+     1>Done Building Project "D:\Github\GenVisUpload\GenVisUpload\GenVisUpload.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:05.85

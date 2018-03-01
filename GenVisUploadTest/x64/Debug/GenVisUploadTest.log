@@ -1,9 +1,212 @@
-﻿Build started 28/02/2018 3:40:03 PM.
-     1>Project "D:\Github\GenVisUpload\GenVisUploadTest\GenVisUploadTest.vcxproj" on node 2 (Clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "x64\Debug\GenVisUploadTest.tlog\GenVisUploadTest.lastbuildstate".
-     1>Done Building Project "D:\Github\GenVisUpload\GenVisUploadTest\GenVisUploadTest.vcxproj" (Clean target(s)).
+﻿Build started 1/03/2018 11:52:18 AM.
+     1>Project "D:\Github\GenVisUpload\GenVisUploadTest\GenVisUploadTest.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Touching "x64\Debug\GenVisUploadTest.tlog\unsuccessfulbuild".
+       VcpkgTripletSelection:
+         Using triplet "x64-windows" from "c:\vcpkg\installed\x64-windows\"
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /I"c:\vcpkg\installed\x64-windows\include" /ZI /nologo /W3 /WX- /Od /D _DEBUG /D _CONSOLE /D GTEST_LINKED_AS_SHARED_LIBRARY=1 /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt SyncImageUploaderTest.cpp
+         SyncImageUploaderTest.cpp
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-message.h(224): warning C4251: 'testing::Message::ss_': class 'testing::internal::scoped_ptr<std::stringstream>' needs to have dll-interface to be used by clients of class 'testing::Message'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest-message.h(224): note: see declaration of 'testing::internal::scoped_ptr<std::stringstream>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-filepath.h(200): warning C4251: 'testing::internal::FilePath::pathname_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::internal::FilePath'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-internal.h(148): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'testing::internal::GoogleTestFailureException'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\stdexcept(156): note: see declaration of 'std::runtime_error'
+         c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-internal.h(148): note: see declaration of 'testing::internal::GoogleTestFailureException'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-internal.h(589): warning C4251: 'testing::internal::TypedTestCasePState::registered_tests_': class 'std::map<std::string,testing::internal::CodeLocation,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'testing::internal::TypedTestCasePState'
+                 with
+                 [
+                     _Kty=std::string,
+                     _Ty=testing::internal::CodeLocation
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-internal.h(586): note: see declaration of 'std::map<std::string,testing::internal::CodeLocation,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+                 with
+                 [
+                     _Kty=std::string,
+                     _Ty=testing::internal::CodeLocation
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-death-test-internal.h(134): warning C4251: 'testing::internal::DeathTest::last_death_test_message_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::internal::DeathTest'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(111): warning C4251: 'testing::TestPartResult::file_name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestPartResult'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(115): warning C4251: 'testing::TestPartResult::summary_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestPartResult'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(116): warning C4251: 'testing::TestPartResult::message_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestPartResult'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(140): warning C4251: 'testing::TestPartResultArray::array_': class 'std::vector<testing::TestPartResult,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::TestPartResultArray'
+                 with
+                 [
+                     _Ty=testing::TestPartResult
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(140): note: see declaration of 'std::vector<testing::TestPartResult,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=testing::TestPartResult
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(162): warning C4275: non dll-interface class 'testing::TestPartResultReporterInterface' used as base for dll-interface class 'testing::internal::HasNewFatalFailureHelper'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(146): note: see declaration of 'testing::TestPartResultReporterInterface'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(162): note: see declaration of 'testing::internal::HasNewFatalFailureHelper'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(335): warning C4251: 'testing::AssertionResult::message_': class 'testing::internal::scoped_ptr<std::string>' needs to have dll-interface to be used by clients of class 'testing::AssertionResult'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(335): note: see declaration of 'testing::internal::scoped_ptr<std::string>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(455): warning C4251: 'testing::Test::gtest_flag_saver_': class 'testing::internal::scoped_ptr<testing::internal::GTestFlagSaver>' needs to have dll-interface to be used by clients of class 'testing::Test'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(455): note: see declaration of 'testing::internal::scoped_ptr<testing::internal::GTestFlagSaver>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(621): warning C4251: 'testing::TestResult::test_part_results_': class 'std::vector<testing::TestPartResult,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::TestResult'
+                 with
+                 [
+                     _Ty=testing::TestPartResult
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest-test-part.h(140): note: see declaration of 'std::vector<testing::TestPartResult,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=testing::TestPartResult
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(623): warning C4251: 'testing::TestResult::test_properties_': class 'std::vector<testing::TestProperty,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::TestResult'
+                 with
+                 [
+                     _Ty=testing::TestProperty
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(579): note: see declaration of 'std::vector<testing::TestProperty,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=testing::TestProperty
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(751): warning C4251: 'testing::TestInfo::test_case_name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestInfo'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(752): warning C4251: 'testing::TestInfo::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestInfo'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(755): warning C4251: 'testing::TestInfo::type_param_': class 'testing::internal::scoped_ptr<const std::string>' needs to have dll-interface to be used by clients of class 'testing::TestInfo'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(755): note: see declaration of 'testing::internal::scoped_ptr<const std::string>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(758): warning C4251: 'testing::TestInfo::value_param_': class 'testing::internal::scoped_ptr<const std::string>' needs to have dll-interface to be used by clients of class 'testing::TestInfo'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(755): note: see declaration of 'testing::internal::scoped_ptr<const std::string>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(759): warning C4251: 'testing::TestInfo::location_': struct 'testing::internal::CodeLocation' needs to have dll-interface to be used by clients of class 'testing::TestInfo'
+         c:\vcpkg\installed\x64-windows\include\gtest\internal\gtest-internal.h(504): note: see declaration of 'testing::internal::CodeLocation'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(931): warning C4251: 'testing::TestCase::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::TestCase'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(934): warning C4251: 'testing::TestCase::type_param_': class 'testing::internal::scoped_ptr<const std::string>' needs to have dll-interface to be used by clients of class 'testing::TestCase'
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(755): note: see declaration of 'testing::internal::scoped_ptr<const std::string>'
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(937): warning C4251: 'testing::TestCase::test_info_list_': class 'std::vector<testing::TestInfo *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::TestCase'
+                 with
+                 [
+                     _Ty=testing::TestInfo *
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(856): note: see declaration of 'std::vector<testing::TestInfo *,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=testing::TestInfo *
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(941): warning C4251: 'testing::TestCase::test_indices_': class 'std::vector<int,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::TestCase'
+                 with
+                 [
+                     _Ty=int
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gtest\gtest.h(941): note: see declaration of 'std::vector<int,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=int
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-cardinalities.h(122): warning C4251: 'testing::Cardinality::impl_': class 'testing::internal::linked_ptr<const testing::CardinalityInterface>' needs to have dll-interface to be used by clients of class 'testing::Cardinality'
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-cardinalities.h(122): note: see declaration of 'testing::internal::linked_ptr<const testing::CardinalityInterface>'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(340): warning C4251: 'testing::internal::MatcherBase<const testing::internal::string &>::impl_': class 'testing::internal::linked_ptr<const testing::MatcherInterface<T>>' needs to have dll-interface to be used by clients of class 'testing::internal::MatcherBase<const testing::internal::string &>'
+                 with
+                 [
+                     T=const testing::internal::string &
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(308): note: see declaration of 'testing::internal::linked_ptr<const testing::MatcherInterface<T>>'
+                 with
+                 [
+                     T=const testing::internal::string &
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(357): warning C4251: 'testing::internal::MatcherBase<testing::internal::string>::impl_': class 'testing::internal::linked_ptr<const testing::MatcherInterface<T>>' needs to have dll-interface to be used by clients of class 'testing::internal::MatcherBase<testing::internal::string>'
+                 with
+                 [
+                     T=testing::internal::string
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(308): note: see declaration of 'testing::internal::linked_ptr<const testing::MatcherInterface<T>>'
+                 with
+                 [
+                     T=testing::internal::string
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(3294): warning C4251: 'testing::internal::MatchMatrix::matched_': class 'std::vector<char,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::internal::MatchMatrix'
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(3294): note: see declaration of 'std::vector<char,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(3338): warning C4251: 'testing::internal::UnorderedElementsAreMatcherImplBase::matcher_describers_': class 'std::vector<const testing::MatcherDescriberInterface *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::internal::UnorderedElementsAreMatcherImplBase'
+                 with
+                 [
+                     _Ty=const testing::MatcherDescriberInterface *
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-matchers.h(3316): note: see declaration of 'std::vector<const testing::MatcherDescriberInterface *,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=const testing::MatcherDescriberInterface *
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(238): warning C4251: 'testing::internal::UntypedFunctionMockerBase::untyped_on_call_specs_': class 'std::vector<const void *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::internal::UntypedFunctionMockerBase'
+                 with
+                 [
+                     _Ty=const void *
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(219): note: see declaration of 'std::vector<const void *,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=const void *
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(241): warning C4251: 'testing::internal::UntypedFunctionMockerBase::untyped_expectations_': class 'std::vector<testing::internal::linked_ptr<testing::internal::ExpectationBase>,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::internal::UntypedFunctionMockerBase'
+                 with
+                 [
+                     _Ty=testing::internal::linked_ptr<testing::internal::ExpectationBase>
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(221): note: see declaration of 'std::vector<testing::internal::linked_ptr<testing::internal::ExpectationBase>,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=testing::internal::linked_ptr<testing::internal::ExpectationBase>
+                 ]
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(547): warning C4251: 'testing::Expectation::expectation_base_': class 'testing::internal::linked_ptr<testing::internal::ExpectationBase>' needs to have dll-interface to be used by clients of class 'testing::Expectation'
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(221): note: see declaration of 'testing::internal::linked_ptr<testing::internal::ExpectationBase>'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(633): warning C4251: 'testing::Sequence::last_expectation_': class 'testing::internal::linked_ptr<testing::Expectation>' needs to have dll-interface to be used by clients of class 'testing::Sequence'
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(633): note: see declaration of 'testing::internal::linked_ptr<testing::Expectation>'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(848): warning C4251: 'testing::internal::ExpectationBase::source_text_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'testing::internal::ExpectationBase'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\xstring(2633): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(858): warning C4251: 'testing::internal::ExpectationBase::immediate_prerequisites_': class 'testing::ExpectationSet' needs to have dll-interface to be used by clients of class 'testing::internal::ExpectationBase'
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(563): note: see declaration of 'testing::ExpectationSet'
+     1>c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(864): warning C4251: 'testing::internal::ExpectationBase::untyped_actions_': class 'std::vector<const void *,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'testing::internal::ExpectationBase'
+                 with
+                 [
+                     _Ty=const void *
+                 ]
+         c:\vcpkg\installed\x64-windows\include\gmock\gmock-spec-builders.h(219): note: see declaration of 'std::vector<const void *,std::allocator<_Ty>>'
+                 with
+                 [
+                     _Ty=const void *
+                 ]
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(41): warning C4251: 'ImageStructQueue::m_internalQueue': class 'moodycamel::ConcurrentQueue<ImageStructPtr,moodycamel::ConcurrentQueueDefaultTraits>' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(41): note: see declaration of 'moodycamel::ConcurrentQueue<ImageStructPtr,moodycamel::ConcurrentQueueDefaultTraits>'
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(42): warning C4251: 'ImageStructQueue::cv': class 'std::condition_variable' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\mutex(536): note: see declaration of 'std::condition_variable'
+     1>d:\github\genvisupload\genvisuploadlib\imagestructqueue.h(43): warning C4251: 'ImageStructQueue::cv_m': class 'std::mutex' needs to have dll-interface to be used by clients of class 'ImageStructQueue'
+         c:\program files (x86)\microsoft visual studio 14.0\vc\include\mutex(78): note: see declaration of 'std::mutex'
+     1>d:\github\genvisupload\genvisuploadlib\mock_sqlitedbwrapper.h(7): warning C4373: 'Mock_SqliteDBWrapper::DeleteItem': virtual function overrides 'IDBWrapper::DeleteItem', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers
+         d:\github\genvisupload\genvisuploadlib\idbwrapper.h(10): note: see declaration of 'IDBWrapper::DeleteItem'
+     1>d:\github\genvisupload\genvisuploadlib\syncimageuploader.h(17): warning C4251: 'SyncImageUploader::m_dbWrapperPtr': class 'std::shared_ptr<IDBWrapper>' needs to have dll-interface to be used by clients of class 'SyncImageUploader'
+         d:\github\genvisupload\genvisuploadlib\idbwrapper.h(14): note: see declaration of 'std::shared_ptr<IDBWrapper>'
+     1>d:\github\genvisupload\genvisuploadlib\syncimageuploader.h(18): warning C4251: 'SyncImageUploader::m_delegateUploaderPtr': class 'std::shared_ptr<IDelegateUploader>' needs to have dll-interface to be used by clients of class 'SyncImageUploader'
+         d:\github\genvisupload\genvisuploadlib\idelegateuploader.h(12): note: see declaration of 'std::shared_ptr<IDelegateUploader>'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win64" /LIBPATH:"c:\vcpkg\installed\x64-windows\debug\lib" /LIBPATH:"c:\vcpkg\installed\x64-windows\debug\lib\manual-link" "c:\vcpkg\installed\x64-windows\debug\lib\manual-link\*.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "c:\vcpkg\installed\x64-windows\debug\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.lib" /MACHINE:X64 x64\Debug\GenVisUploadTest.obj
+         x64\Debug\ImageStructQueueTest.obj
+         x64\Debug\SqliteImageFetcherTest.obj
+         x64\Debug\stdafx.obj
+         x64\Debug\SyncImageUploaderTest.obj
+         D:\Github\GenVisUpload\x64\Debug\GenVisUploadLib.lib
+         GenVisUploadTest.vcxproj -> D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.exe
+         GenVisUploadTest.vcxproj -> D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.pdb (Full PDB)
+       AppLocalFromInstalled:
+         powershell.exe -ExecutionPolicy Bypass -noprofile -File "c:\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "D:\Github\GenVisUpload\x64\Debug\GenVisUploadTest.exe" "c:\vcpkg\installed\x64-windows\debug\bin" "x64\Debug\GenVisUploadTest.tlog\GenVisUploadTest.write.1u.tlog" "x64\Debug\vcpkg.applocal.log"
+         D:\Github\GenVisUpload\x64\Debug\gmock.dll
+         D:\Github\GenVisUpload\x64\Debug\sqlite3.dll
+       FinalizeBuildStatus:
+         Deleting file "x64\Debug\GenVisUploadTest.tlog\unsuccessfulbuild".
+         Touching "x64\Debug\GenVisUploadTest.tlog\GenVisUploadTest.lastbuildstate".
+     1>Done Building Project "D:\Github\GenVisUpload\GenVisUploadTest\GenVisUploadTest.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.27
+Time Elapsed 00:00:07.24
